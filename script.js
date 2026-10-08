@@ -112,6 +112,12 @@
 
             const filter = btn.dataset.filter;
 
+            // Con un filtro activo se muestran todas las unidades de esa categoría
+            const grid = document.getElementById('catalogGrid');
+            const toggleWrap = document.querySelector('.catalog-toggle-wrap');
+            grid.classList.toggle('filtering', filter !== 'all');
+            if (toggleWrap) toggleWrap.style.display = filter === 'all' ? '' : 'none';
+
             catCards.forEach(card => {
                 if (filter === 'all') {
                     card.classList.remove('hidden');

@@ -597,7 +597,8 @@ section {
     display: none;
 }
 
-.cat-card.cat-extra.visible {
+.cat-card.cat-extra.visible,
+.catalog-grid.filtering .cat-card.cat-extra:not(.hidden) {
     display: block;
 }
 
